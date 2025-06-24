@@ -187,8 +187,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
         activeGiveaways: activeGiveaways.length,
         totalGiveaways: giveaways.length,
         customPages: pages.length,
-        totalMembers: 15842, // Static for demo
-        onlineMembers: 2341, // Static for demo
+        totalMembers: 1106,
+        onlineMembers: 110,
         totalPrizesGiven: 50000, // Static for demo
         totalWinners: 8942, // Static for demo
       };

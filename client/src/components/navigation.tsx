@@ -55,11 +55,11 @@ export default function Navigation() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <Link href="/">
-              <a className={`hover:text-[hsl(var(--tiger-orange))] transition-colors duration-300 font-medium ${
+              <span className={`hover:text-[hsl(var(--tiger-orange))] transition-colors duration-300 font-medium cursor-pointer ${
                 location === "/" ? "text-[hsl(var(--tiger-orange))]" : ""
               }`}>
                 Home
-              </a>
+              </span>
             </Link>
             <button 
               onClick={() => scrollToSection("about")}
@@ -74,11 +74,11 @@ export default function Navigation() {
               Giveaways
             </button>
             <Link href="/admin">
-              <a className={`hover:text-[hsl(var(--tiger-orange))] transition-colors duration-300 font-medium ${
+              <span className={`hover:text-[hsl(var(--tiger-orange))] transition-colors duration-300 font-medium cursor-pointer ${
                 location === "/admin" ? "text-[hsl(var(--tiger-orange))]" : ""
               }`}>
                 Admin
-              </a>
+              </span>
             </Link>
             <Button asChild>
               <a 
@@ -111,12 +111,12 @@ export default function Navigation() {
           >
             <div className="flex flex-col space-y-4">
               <Link href="/">
-                <a 
-                  className="hover:text-[hsl(var(--tiger-orange))] transition-colors duration-300 font-medium"
+                <span 
+                  className="hover:text-[hsl(var(--tiger-orange))] transition-colors duration-300 font-medium cursor-pointer"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Home
-                </a>
+                </span>
               </Link>
               <button 
                 onClick={() => scrollToSection("about")}
@@ -131,12 +131,12 @@ export default function Navigation() {
                 Giveaways
               </button>
               <Link href="/admin">
-                <a 
-                  className="hover:text-[hsl(var(--tiger-orange))] transition-colors duration-300 font-medium"
+                <span 
+                  className="hover:text-[hsl(var(--tiger-orange))] transition-colors duration-300 font-medium cursor-pointer"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Admin
-                </a>
+                </span>
               </Link>
               <Button asChild className="w-full">
                 <a 

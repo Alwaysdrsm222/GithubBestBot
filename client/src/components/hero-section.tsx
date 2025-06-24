@@ -1,15 +1,16 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import Hexagon from "./hexagon";
+import tigerImage from "@assets/Screenshot_20250622_194803_Discord_1750741074942.jpg";
 
 export default function HeroSection() {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
-      {/* Tiger-themed background image */}
+      {/* RBC Profile picture as background */}
       <div className="absolute inset-0 opacity-20">
         <img 
-          src="https://pixabay.com/get/g693cfc27414bfb2b4c9026b3e6bf48479fb8a3e57cbdbcd6727e285835292adf57d1c904ce211fd1f22a097b19b357eff52a3b91019e3245c3561d82d95f547e_1280.jpg" 
-          alt="Tiger background" 
+          src={tigerImage} 
+          alt="RBC Community Tiger" 
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--tiger-orange))]/30 to-[hsl(var(--tiger-yellow))]/30"></div>

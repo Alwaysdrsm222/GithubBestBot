@@ -44,29 +44,7 @@ export class MemStorage implements IStorage {
   }
 
   private initializeDemoData() {
-    // Create sample giveaways
-    const sampleGiveaways: InsertGiveaway[] = [
-      {
-        title: "Ultimate Gaming Bundle",
-        description: "Win a complete gaming setup including mechanical keyboard, gaming mouse, headset, and $200 Steam gift card!",
-        prizeValue: 500,
-        imageUrl: "https://images.unsplash.com/photo-1593305841991-05c297ba4575?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400",
-        durationDays: 2,
-        isActive: true,
-      },
-      {
-        title: "Discord Nitro + Games",
-        description: "1-year Discord Nitro subscription plus 5 AAA games of your choice from our curated list!",
-        prizeValue: 300,
-        imageUrl: "https://images.unsplash.com/photo-1612198188060-c7c2a3b66eae?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400",
-        durationDays: 5,
-        isActive: true,
-      }
-    ];
-
-    sampleGiveaways.forEach(giveaway => {
-      this.createGiveaway(giveaway);
-    });
+    // No demo data - admin will create giveaways
   }
 
   async getUser(id: number): Promise<User | undefined> {
@@ -104,6 +82,8 @@ export class MemStorage implements IStorage {
     const giveaway: Giveaway = {
       ...insertGiveaway,
       id,
+      imageUrl: insertGiveaway.imageUrl || null,
+      isActive: insertGiveaway.isActive !== undefined ? insertGiveaway.isActive : true,
       entries: Math.floor(Math.random() * 5000) + 500, // Random entries for demo
       createdAt: new Date(),
     };
@@ -146,6 +126,7 @@ export class MemStorage implements IStorage {
     const page: CustomPage = {
       ...insertPage,
       id,
+      isPublished: insertPage.isPublished || false,
       createdAt: new Date(),
     };
     this.customPages.set(id, page);
