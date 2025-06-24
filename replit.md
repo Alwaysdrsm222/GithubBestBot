@@ -103,8 +103,12 @@ This is a full-stack web application for the RBC (Royal Bengal Cat) Gaming Commu
 
 ## Changelog
 
-Changelog:
-- June 24, 2025. Initial setup
+- June 24, 2025: Initial setup with tiger-themed design
+- June 24, 2025: Added admin password protection (Rbcadminpass2025)
+- June 24, 2025: Removed sample giveaways, live giveaway count
+- June 24, 2025: Updated member stats (1,106 total, 110 online)
+- June 24, 2025: Fixed dark theme and navigation issues
+- June 24, 2025: Prepared deployment configurations for multiple platforms
 
 ## User Preferences
 
